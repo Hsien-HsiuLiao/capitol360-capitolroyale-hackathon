@@ -5,8 +5,11 @@ $(document).ready(function() {
   
   $.get(url, function (response) {
    // alert(response[0].description);
-    $("#description").html(response[0].description + '<p>' + response[0].releaseOf.name);
+   console.log(response[0].image.contentURL); $("#description").html(response[0].description );
+
+$("#songname").html(response[0].releaseOf.name);    
     
+$("#picture").html('<img src=' + response[0].image.contentURL + '>')    
          
         }
         );  //end get
